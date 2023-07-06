@@ -66,7 +66,7 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
         else:
             print('[ERROR] valor invalido')
 
-        return saldo, extrato
+        return saldo, extrato, numero_saques
 
 def exibir_extrato(saldo, /,*, extrato):
     #imprime o extrato recebendo o valor de:
@@ -159,7 +159,7 @@ def main():
         elif opcao == 's':
             valor = float(input('valor do saque: '))
 
-            saldo, extrato = sacar(
+            saldo, extrato, numero_saques = sacar(
                 saldo = saldo,
                 valor = valor,
                 extrato = extrato,
